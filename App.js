@@ -1,34 +1,106 @@
 
-import { createAppContainer } from 'react-navigation';
+import React, {Component} from 'react';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import{ createBottomTabNavigator } from 'react-navigation-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-// import{ createBottomTabNavigator } from 'react-navigation-tabs';
+import {YellowBox} from 'react-native';
 
-// also npm install react-native-gesture-handler
-
-// import HomeScreen from './home';
-// import AboutScreen from './about';
-// import SettingScreen from './settings';
-
-
-import LoginScreen from './login';
 import Tabs from './tabs';
 
-const stacknavigator = createStackNavigator({
-  login: LoginScreen,
-  tabs: Tabs
-});
+// Get started screens
+import GetStarted from './getstart';
+import LoginScreen from './login';
+import LoadingScreen from './loading';
+import RegisterScreen from './register';
 
-// const tabNavigator = createBottomTabNavigator({
-//   Home: HomeScreen,
-//   About: AboutScreen,
-//   Settings: SettingScreen
+// Main app screens
+import HomeScreen from './home';
+import CanvasScreen from './canvas';
+import SearchScreen from './search';
+import ColorpickScreen from './colorpick';
 
-// });
+// Get database from firebase
+import * as firebase from 'firebase'
 
-export default createAppContainer (stacknavigator)
-// export default createAppContainer (tabNavigator)
-// this is only for tabnavigator
+// Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDHmCkkb06oleKlu3LFtXeYHVLpsveoRgo",
+  authDomain: "atoapp-b3516.firebaseapp.com",
+  databaseURL: "https://atoapp-b3516.firebaseio.com",
+  projectId: "atoapp-b3516",
+  storageBucket: "atoapp-b3516.appspot.com",
+  messagingSenderId: "1023881493310",
+  appId: "1:1023881493310:web:b80df5d09a64a4fb918a6f"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+//ignore these warnings
+YellowBox.ignoreWarnings(['RCTRootView cancelTouches', 'UIManager']);
+
+// Create bottom tabs
+const AppTabNavigator = createBottomTabNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarLabel: "Home",
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={22} />
+        )
+      }
+    }, 
+    Search: {
+      screen: SearchScreen,
+      navigationOptions: {
+        tabBarLabel: "Search",
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={22} />
+        )
+      }
+    },
+    Colorpick: {
+      screen: ColorpickScreen,
+      navigationOptions: {
+        tabBarLabel: "Color Picker",
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={22} />
+        )
+      }
+    },
+    Canvas: {
+      screen: CanvasScreen,
+      navigationOptions: {
+        tabBarLabel: "Canvas",
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={22} />
+        )
+      }
+    },
+  }
+)
+
+// Get transition between screen, new screen is placed on top of stack
+const AuthStack = createStackNavigator({
+   Login: LoginScreen,
+   Register: RegisterScreen
+})
+
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      Loading: LoadingScreen,
+      App: AppTabNavigator,
+      Auth: AuthStack
+    },
+    {
+      initialRouteName: "Loading"
+    }
+  )
+);
 
 
 

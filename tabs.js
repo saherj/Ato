@@ -1,13 +1,15 @@
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createAppContainer } from 'react-navigation';
 
 import HomeScreen from './home';
-import AboutScreen from './about';
 import SettingScreen from './settings';
+import CanvasScreen from './canvas';
 
-export default createBottomTabNavigator({
+const tabNavigator = createBottomTabNavigator({
   Home: HomeScreen,
-  About: AboutScreen,
+  Canvas: CanvasScreen,
   Settings: SettingScreen               
 
 })
 
+export default createAppContainer (tabNavigator)
