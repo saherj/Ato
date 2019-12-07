@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
+
 import * as firebase from 'firebase'
+
+import Folders from './src/folders';
+import Recent from './src/recents';
 
 export default class HomeScreen extends Component {
     state = {
@@ -41,38 +45,15 @@ export default class HomeScreen extends Component {
 
                     </View>
                 </View>
+
                 <View style={styles.container3}>
+                     <Folders />
+                    
                 
-                <View style={styles.container4}></View>
-                    <View>
-                        <Text style={styles.subheading}>Folders</Text>
-                    </View>
-                    <View style={styles.cardcontainer}>
-                            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                                <View>
-                                    <Image style={styles.mediumcardimage}
-                                        source={ require('./assets/inspiration1.jpg')}/>
-                                    <Text style={styles.mediumcardtext}>Ato App</Text>
-                                </View>
-                                <View>
-                                    <Image style={styles.mediumcardimage}
-                                        source={ require('./assets/inspiration2.jpg')}/>
-                                    <Text style={styles.mediumcardtext}>Graffitii Allay</Text>
-                                </View>
-                                <View>
-                                    <Image style={styles.mediumcardimage}
-                                        source={ require('./assets/inspiration3.jpg')}/>
-                                    <Text style={styles.mediumcardtext}>Bicycle App</Text>
-                                </View>
-                                <View>
-                                    <Image style={styles.mediumcardimage}
-                                        source={ require('./assets/inspiration4.jpg')}/>
-                                    <Text style={styles.mediumcardtext}>Meseum</Text>
-                                </View>
-                            </ScrollView>
-                        </View>
+                
+                    <Recent />
                         
-                    </View>
+               </View>     
             </View>
         );
     }
@@ -133,40 +114,7 @@ export default class HomeScreen extends Component {
         fontSize:30,
         fontWeight:'600',
     },
-    subheading: {
-        fontSize:25,
-        fontWeight: '700',
-        marginTop:15,
-        marginVertical:0,
-        
-    },
-    mediumcardimage: {
-        margin:0,
-       borderRadius:10,
-        padding:0,
-        marginTop:15,
-        marginLeft:15,
-        marginRight:0,
-        backgroundColor: '#FFCB04',
-        resizeMode: 'cover',
-        width: 130,
-        height:100,
-    },
-
-    mediumcardtext: {
-        marginTop:-10,
-        fontWeight: '500',
-        fontSize:15,
-        textAlign:'left',
-        marginLeft:15,
-        padding:5,
-        backgroundColor:'white',
-    },
-    cardcontainer: {
-        flexDirection: 'column',
-        paddingRight:0,
-        marginLeft:-10, 
-       
-    },
+   
+   
     
 });
