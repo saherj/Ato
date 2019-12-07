@@ -20,6 +20,6 @@ a - Android Simulator
 # Convered in this Repo:
 - used componets, properties and elements, flexbox, scrollview, Lottie, Firebase Auth (signin, signup), Get Started page, navigtion, search, Api (Fake Loremipsum)
 
-# Things I had hard time accompling:
+# Things we had hard time accompling:
 - Canvas
 - Firebase Folders
