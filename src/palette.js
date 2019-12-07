@@ -21,6 +21,11 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center'
     },
+    paletteContainer:{
+        flex:3,
+        flexDirection:'row', 
+
+    },
 }
 
 

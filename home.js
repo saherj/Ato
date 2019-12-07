@@ -26,13 +26,16 @@ export default class HomeScreen extends Component {
             <View style={styles.container}>
                 <Image source={require('../Ato/assets/ATO-01.png')} style={{ position: "absolute", width: '100%', height: '100%' }}></Image>
                 <View style={styles.container2}>
-                    <View>
+                    <View style={styles.topFlex} >
                         <Text style={styles.nameStyle}>Hi {this.state.displayName} !</Text>
-                    </View>
-                    <View>
+                        <View>
                         <TouchableOpacity style={styles.signOutButton} onPress={this.signOutUser}>
                             <Text style={styles.buttonText}>LOG OUT</Text>
                         </TouchableOpacity>
+                        </View>
+                    </View>
+                    <View>
+                        
 
                         <View style={styles.cards}>
                             <View style={styles.hrline}></View>
@@ -71,7 +74,7 @@ export default class HomeScreen extends Component {
     },
     container3: {
         height:600,
-        marginTop:30,
+        marginTop:20,
        paddingHorizontal:20,
         backgroundColor:'#FFCB04',
         borderRadius:20
@@ -84,20 +87,25 @@ export default class HomeScreen extends Component {
         backgroundColor:'white',
         padding:20,
         borderRadius:5,
+        marginTop:70,
+        marginBottom:0,
         
     },
     signOutButton:{
         width:150,
-        marginTop: 32,
+        marginTop: -40,
         backgroundColor:'white', 
         padding:15,
+        marginLeft:245,
         borderRadius:10,
+        
     },
     buttonText: {
         color:'#FFCB04',
         fontWeight:'bold',
         justifyContent:'center',
-        fontSize:20,
+        alignContent:'center',
+        fontSize:15,
         fontWeight:'700',
         // textDecorationLine: 'underline',
     },
@@ -118,6 +126,8 @@ export default class HomeScreen extends Component {
         marginVertical:10,
        
     },
+
+    
    
    
     

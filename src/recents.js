@@ -42,9 +42,9 @@ class Recent extends React.Component {
 const styles = {
 
     container4: {
-        height:200,
+        height:190,
         marginTop:10,
-       paddingHorizontal:20,
+       paddingHorizontal:10,
         backgroundColor:'#FFCB04',
         borderRadius:20
     },
@@ -58,7 +58,7 @@ const styles = {
         backgroundColor: '#FFCB04',
         resizeMode: 'cover',
         width: 130,
-        height:100,
+        height:90,
     },
 
     mediumcardtext: {
@@ -79,8 +79,9 @@ const styles = {
     subheading: {
         fontSize:25,
         fontWeight: '700',
-        marginTop:15,
+        marginTop:30,
         marginVertical:0,
+        marginHorizontal:10
         
     },
 }

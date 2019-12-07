@@ -13,15 +13,40 @@ class Folder extends React.Component {
                         <View style={styles.container4}>
                             <View style= {styles.folderContainer}>
                                 <View style= {styles.minicard}>
-                                    <Text>Test1</Text>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/folder96.png')}/>
+                                    <Text>Atto App</Text>
 
                                 </View>
                                 <View style= {styles.minicard}>
-                                    <Text>Test2</Text>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/folder96.png')}/>
+                                    <Text>IOT Web</Text>
 
                                 </View>
                                 <View style= {styles.minicard}>
-                                    <Text>Test3</Text>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/folder96.png')}/>
+                                    <Text>Wall Art</Text>
+
+                                </View>
+                                <View style= {styles.minicard}>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/folder96.png')}/>
+                                <Text>Desk</Text>
+
+                                </View>
+                                <View style= {styles.minicard}>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/folder96.png')}/>
+                                <Text>Trends</Text>
+
+                                </View>
+                                <View style= {styles.minicard}>
+                                <Image style={styles.minicardimage}
+                                        source={ require('../assets/addfolder96.png')}/>
+                                
+                                    <Text>Add New</Text>
 
                                 </View>
                             </View>
@@ -38,7 +63,7 @@ const styles = {
 
     container4: {
         height:170,
-        marginTop:10,
+        marginTop:5,
        paddingHorizontal:20,
         backgroundColor:'#FFCB04',
         borderRadius:20
@@ -49,28 +74,33 @@ const styles = {
         fontWeight: '700',
         marginTop:15,
         marginVertical:0,
+        marginHorizontal:10,
+       
         
     },
     
     folderContainer: {
         flex:3,
-        flexDirection: 'column',
+        flexDirection: 'row',
         flexWrap: 'wrap',
-        width:500,
+        width:'120%',
         height:200,
         justifyContent: 'space-evenly',
-        backgroundColor:'red',
+        
+        marginHorizontal:-25,
+
         
     },
     minicard: { 
-        marginVertical:15,
+        height:80,
+        width:100,
+        marginVertical:10,
         borderColor: 'white',
         backgroundColor: 'white',
         borderWidth:1,
         borderRadius:10,
         alignItems: 'center',
-        paddingHorizontal:30,
-        paddingVertical:6,
+        
     },
 
     minicardtext: {
@@ -90,6 +120,10 @@ const styles = {
         height:64,
     },
 
+    minicardimage:{
+        width:54,
+        height:54,
+    },
     
 }
 
