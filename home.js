@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
-
 import * as firebase from 'firebase'
 
 import Folders from './src/folders';
@@ -16,7 +15,7 @@ export default class HomeScreen extends Component {
         const { email, displayName } = firebase.auth().currentUser;
         this.setState({ email, displayName });
     }
-
+     // Send task to firebase to log out
     signOutUser = () => {
         firebase.auth().signOut();
     };
@@ -24,11 +23,14 @@ export default class HomeScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image source={require('../Ato/assets/ATO-01.png')} style={{ position: "absolute", width: '100%', height: '100%' }}></Image>
+                <Image source={require('../Ato/assets/ATO-01.png')} 
+                        style={{ position: "absolute", width: '100%', height: '100%' }}></Image>
                 <View style={styles.container2}>
                     <View style={styles.topFlex} >
+                         {/* Shows unique display based on user email from firebase */}
                         <Text style={styles.nameStyle}>Hi {this.state.displayName} !</Text>
                         <View>
+                        {/* Send the task to signOutUser */}
                         <TouchableOpacity style={styles.signOutButton} onPress={this.signOutUser}>
                             <Text style={styles.buttonText}>LOG OUT</Text>
                         </TouchableOpacity>
@@ -70,7 +72,6 @@ export default class HomeScreen extends Component {
         marginTop:60,
         marginHorizontal:20,
         flexDirection:'column',
-
     },
     container3: {
         height:600,
@@ -78,18 +79,14 @@ export default class HomeScreen extends Component {
        paddingHorizontal:20,
         backgroundColor:'#FFCB04',
         borderRadius:20
-    },
-
-    
-    cards:{
-        
+    }, 
+    cards:{       
         height:100, 
         backgroundColor:'white',
         padding:20,
         borderRadius:5,
         marginTop:70,
-        marginBottom:0,
-        
+        marginBottom:0,    
     },
     signOutButton:{
         width:150,

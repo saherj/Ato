@@ -7,11 +7,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {YellowBox} from 'react-native';
 
-
-
 // Get started screens
 import GetStarted from './getstart';
-
 import LoginScreen from './login';
 import LoadingScreen from './loading';
 import RegisterScreen from './register';
@@ -27,13 +24,13 @@ import * as firebase from 'firebase'
 
 // Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDHmCkkb06oleKlu3LFtXeYHVLpsveoRgo",
-  authDomain: "atoapp-b3516.firebaseapp.com",
-  databaseURL: "https://atoapp-b3516.firebaseio.com",
-  projectId: "atoapp-b3516",
-  storageBucket: "atoapp-b3516.appspot.com",
-  messagingSenderId: "1023881493310",
-  appId: "1:1023881493310:web:b80df5d09a64a4fb918a6f"
+  apiKey: "AIzaSyCPBjyKX44CG4LxKSvjy9lg-cPcDDejv1w",
+  authDomain: "ato-app-561fa.firebaseapp.com",
+  databaseURL: "https://ato-app-561fa.firebaseio.com",
+  projectId: "ato-app-561fa",
+  storageBucket: "ato-app-561fa.appspot.com",
+  messagingSenderId: "411814149786",
+  appId: "1:411814149786:web:2596a4648f54344ccb6923"
 };
 
 // Initialize Firebase
@@ -42,7 +39,7 @@ firebase.initializeApp(firebaseConfig);
 //ignore these warnings
 YellowBox.ignoreWarnings(['RCTRootView cancelTouches', 'UIManager']);
 
-// Create bottom tabs
+// Create bottom tabs with icons and labels, implied the imported main app screen to the App
 const AppTabNavigator = createBottomTabNavigator(
   {
     Home: {

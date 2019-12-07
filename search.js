@@ -51,7 +51,7 @@ import axios from 'axios';
                   <Input
                     style={styles.inputStyle}
                     value={this.state.wordSearch}
-                    placeholder="Type number only"
+                    placeholder="Type max three numbers "
                     onChangeText={(wordSearch)=>this.setState({wordSearch})}
                   />
 

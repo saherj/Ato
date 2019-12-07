@@ -34,10 +34,7 @@ class WordLoader extends React.Component {
                     source={require('../assets/star.json')}
                    />
             </View>
-                {/* <Image
-                    source={uri: "https://assets1.lottiefiles.com/temp/lf20_csjVxr.json"}
-                    style ={StyleSheet.img}   
-                    />             */}
+
                     
             </View>
         )
