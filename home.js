@@ -30,9 +30,20 @@ export default class HomeScreen extends Component {
                             <Text style={styles.buttonText}>LOG OUT</Text>
                         </TouchableOpacity>
 
+                        <View>
+                            <View style={styles.cards}>
+                                <Text>
+                                    testing
+                                </Text>
+                            </View>
+                            
+                        </View>
+
                     </View>
                 </View>
                 <View style={styles.container3}>
+                
+                <View style={styles.container4}></View>
                     <View>
                         <Text style={styles.subheading}>Folders</Text>
                     </View>
@@ -60,19 +71,7 @@ export default class HomeScreen extends Component {
                                 </View>
                             </ScrollView>
                         </View>
-                        <View>
-                            <View style={styles.cards}>
-                                <Text>
-                                    testing
-                                </Text>
-                            </View>
-                            <View style={styles.cards}>
-                                <Text>
-                                    testing
-                                </Text>
-                            </View>
-                            
-                        </View>
+                        
                     </View>
             </View>
         );
@@ -92,8 +91,16 @@ export default class HomeScreen extends Component {
 
     },
     container3: {
-        height:400,
-        marginTop:180,
+        height:600,
+        marginTop:40,
+       paddingHorizontal:20,
+        backgroundColor:'#FFCB04',
+        borderRadius:20
+    },
+
+    container4: {
+        height:200,
+        marginTop:10,
        paddingHorizontal:20,
         backgroundColor:'#FFCB04',
         borderRadius:20

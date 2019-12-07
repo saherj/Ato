@@ -7,10 +7,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {YellowBox} from 'react-native';
 
-import Tabs from './tabs';
+
 
 // Get started screens
-import GetStarted from './getstart';
+
 import LoginScreen from './login';
 import LoadingScreen from './loading';
 import RegisterScreen from './register';
