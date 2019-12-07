@@ -58,7 +58,7 @@ const AppTabNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: "Search",
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-home" color={tintColor} size={22} />
+          <Icon name="ios-search" color={tintColor} size={22} />
         )
       }
     },
@@ -67,7 +67,7 @@ const AppTabNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: "Color Picker",
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-home" color={tintColor} size={22} />
+          <Icon name="ios-color-palette" color={tintColor} size={22} />
         )
       }
     },
@@ -76,7 +76,7 @@ const AppTabNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: "Canvas",
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-home" color={tintColor} size={22} />
+          <Icon name="ios-brush" color={tintColor} size={22} />
         )
       }
     },

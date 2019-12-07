@@ -26,7 +26,7 @@ import axios from 'axios';
             console.log(error);
         })
     }
-    renderBody = () => {
+    renderResult = () => {
         if(this.state.onCall) {
             return(
                 <WordLoader />
@@ -66,7 +66,7 @@ import axios from 'axios';
                
               </View>
 
-              {this.renderBody()}
+              {this.renderResult()}
           </View>
       );
   }

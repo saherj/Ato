@@ -5,7 +5,10 @@ class SearchBox extends React.Component {
     render(){
         var words = this.props.data;
         if(!words){
-            return<View/>
+            return
+            <View>Type max 3 numbers
+                
+            </View>
 
         }
 
@@ -49,6 +52,8 @@ const styles = {
         color:'black',
         fontSize:30,
         fontWeight:'300',
+        marginHorizontal:30,
+        marginVertical:30,
 
     },
 }
