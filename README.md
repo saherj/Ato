@@ -7,6 +7,7 @@ Āto ​is an application to facilitate the designer or anyone who is intereste
 
 # Install
 Run npm command `npm i`. i stands for install.
+Run npm command `npm  i firebase` 
 
 # Run
 Run expo command `expo start`.

@@ -69,7 +69,7 @@ const styles = {
         borderWidth:1,
         borderRadius:10,
         alignItems: 'center',
-        paddingHorizontal:10,
+        paddingHorizontal:30,
         paddingVertical:6,
     },
 

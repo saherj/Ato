@@ -34,26 +34,24 @@ export default class HomeScreen extends Component {
                             <Text style={styles.buttonText}>LOG OUT</Text>
                         </TouchableOpacity>
 
-                        <View>
-                            <View style={styles.cards}>
-                                <Text>
-                                    testing
-                                </Text>
-                            </View>
-                            
+                        <View style={styles.cards}>
+                            <View style={styles.hrline}></View>
+                            <Text style={styles.cardsText} >
+                                Upcomming Event: Art Meseum Tues 6:30 pm
+                            </Text>
+                            <View style={styles.hrline}></View>
+                            <Text style={styles.cardsText} >
+                                Meeting with Art Director at Wed 6:30 pm
+                            </Text>
                         </View>
-
                     </View>
                 </View>
 
                 <View style={styles.container3}>
-                     <Folders />
-                    
-                
-                
+                    <Folders />
                     <Recent />
                         
-               </View>     
+                </View>     
             </View>
         );
     }
@@ -73,22 +71,16 @@ export default class HomeScreen extends Component {
     },
     container3: {
         height:600,
-        marginTop:40,
+        marginTop:30,
        paddingHorizontal:20,
         backgroundColor:'#FFCB04',
         borderRadius:20
     },
 
-    container4: {
-        height:200,
-        marginTop:10,
-       paddingHorizontal:20,
-        backgroundColor:'#FFCB04',
-        borderRadius:20
-    },
+    
     cards:{
-        marginTop:20,
-        height:60, 
+        
+        height:100, 
         backgroundColor:'white',
         padding:20,
         borderRadius:5,
@@ -113,6 +105,18 @@ export default class HomeScreen extends Component {
     nameStyle: {
         fontSize:30,
         fontWeight:'600',
+    },
+    cardsText:{
+        fontSize:12,
+        fontWeight:'bold',
+
+    },
+    hrline:{
+        height:2,
+        backgroundColor:"#FFCB04",
+        width:'100%',
+        marginVertical:10,
+       
     },
    
    
