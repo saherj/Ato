@@ -10,6 +10,7 @@ import {YellowBox} from 'react-native';
 
 
 // Get started screens
+import GetStarted from './getstart';
 
 import LoginScreen from './login';
 import LoadingScreen from './loading';
