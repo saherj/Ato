@@ -54,7 +54,7 @@ export default class RegisterScreen extends React.Component {
                
 
                     <View>
-                        <Text style={styles.inputTitle}>First Name</Text>
+                        <Text style={styles.inputTitleStyle}>First Name</Text>
                             <TextInput 
                                 style={styles.input} 
                                 autoCapitalize="none" 
@@ -65,7 +65,7 @@ export default class RegisterScreen extends React.Component {
                     </View>
 
                     <View style={{marginTop: 30 }}>
-                        <Text style={styles.inputTitle}>Last Name</Text>
+                        <Text style={styles.inputTitleStyle}>Last Name</Text>
                             <TextInput 
                                 style={styles.input} 
                                 autoCapitalize="none" 
@@ -76,7 +76,7 @@ export default class RegisterScreen extends React.Component {
                     </View>
 
                     <View style={{marginTop: 30 }}>
-                        <Text style={styles.inputTitle}>Email Adress</Text>
+                        <Text style={styles.inputTitleStyle}>Email Adress</Text>
                             <TextInput 
                                 style={styles.input} 
                                 autoCapitalize="none" 
@@ -87,7 +87,7 @@ export default class RegisterScreen extends React.Component {
                     </View>
                     
                     <View style={{marginTop: 30 }}>
-                        <Text style={styles.inputTitle}>Password</Text>
+                        <Text style={styles.inputTitleStyle}>Password</Text>
                         <TextInput style={styles.input} secureTextEntry autoCapitalize="none" onChangeText={password => this.setState({ password })} value={this.state.password}></TextInput>
                     </View>
                 
@@ -141,9 +141,9 @@ export default class RegisterScreen extends React.Component {
         marginBottom: 48,
         marginHorizontal: 30
     },
-    inputTitle: {
+    inputTitleStyle: {
         color: "#8A8F9E",
-        fontSize: 10,
+        fontSize: 11,
         textTransform: "uppercase"
     },
     input: {

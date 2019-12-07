@@ -54,32 +54,30 @@ const styles = {
     
     folderContainer: {
         flex:3,
-        flexDirection: 'row',
+        flexDirection: 'column',
         flexWrap: 'wrap',
-        width:150,
-        height:150,
+        width:500,
+        height:200,
         justifyContent: 'space-evenly',
+        backgroundColor:'red',
         
     },
-    minicard: {
-    
-        marginHorizontal:20,
+    minicard: { 
         marginVertical:15,
-        
         borderColor: 'white',
         backgroundColor: 'white',
         borderWidth:1,
         borderRadius:10,
         alignItems: 'center',
-        paddingHorizontal:30,
+        paddingHorizontal:10,
         paddingVertical:6,
     },
 
     minicardtext: {
-        flex: 1,
+        
         marginTop:0,
         margin:15,
-        marginLeft:20,
+        
         marginVertical:10,
         fontWeight: '600',
         fontSize:15,

@@ -51,7 +51,7 @@ export default class LoginScreen extends React.Component {
                 {/* SIGN IN FORM */}
                 <View style={styles.form}>
                     <View>
-                        <Text style={styles.inputTitle}>Email Adress</Text>
+                        <Text style={styles.inputTitleStyle}>Email Adress</Text>
                             <TextInput 
                                 style={styles.input} 
                                 autoCapitalize="none" 
@@ -61,7 +61,7 @@ export default class LoginScreen extends React.Component {
                             </TextInput>
                     </View>
                     <View style={{marginTop: 11 }}>
-                        <Text style={styles.inputTitle}>Password</Text>
+                        <Text style={styles.inputTitleStyle}>Password</Text>
                         <TextInput style={styles.input} 
                                    secureTextEntry autoCapitalize="none" 
                                    onChangeText={password => this.setState({ password })} 
@@ -112,9 +112,9 @@ export default class LoginScreen extends React.Component {
         marginBottom: 48,
         marginHorizontal: 30
     },
-    inputTitle: {
+    inputTitleStyle: {
         color: "#8A8F9E",
-        fontSize: 10,
+        fontSize: 12,
         textTransform: "uppercase"
     },
     input: {
